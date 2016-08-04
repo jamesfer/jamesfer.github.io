@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+{% if page.coverImage %}
+<div class="full-width">
+  <img src="{{ page.coverImage }}" alt="{{ page.coverImageAlt }}">
+</div>
+{% endif %}
+
+<article class="container project-page">
+  <div class="content-heading">
+    <span class="floating-link">
+      <i class="material-icons">&#xE038;</i>
+      <a href="{{ project.demoUrl }}">Demo</a>
+    </span>
+    <span class="floating-link">
+      <i class="material-icons">&#xE86F;</i>
+      <a href="{{ project.srcUrl }}">Source code</a>
+    </span>
+
+    <h1>{{ page.projectName }}</h1>
+  </div>
+
+  <div class="row">
+    <div class="sidebar col-xs-2">
+      <a class="link" href="#overview">Overview</a>
+      <a class="link" href="#features">Features</a>
+      <a class="link" href="#gallery">Gallery</a>
+    </div>
+
+    <div class="project-information col-xs-10">
+      {{ content }}
+    </div>
+  </div>
+</article>

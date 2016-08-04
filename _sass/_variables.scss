@@ -1,0 +1,14 @@
+$logo-main-color: #047aff;
+
+$link-active-color: #2481D6;
+$link-color: darken($link-active-color, 10%);
+
+@mixin body-font {
+  font-family: "Open Sans", helvetica, sans-serif;
+  line-height: 1.3;
+}
+
+@mixin header-font {
+  font-family: "Oswald", helvetica, sans-serif;
+  text-transform: uppercase;
+}

@@ -1,21 +1,42 @@
 ---
 layout: default
+title: Projects
+link: projects
 ---
 
-<div class="home">
+<!-- <div class="carousel">
+  <img src="images/ue4.jpeg" alt="Unreal Engine 4 screenshot">
+</div> -->
 
-  <h1 class="page-heading">Posts</h1>
+<div class="container">
+  <section class="main-content">
+    <h1 class="content-heading">Projects</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    {% for project in site.projects %}
+      <section class="project">
+        <div class="project-image">
+          <img src="{{ project.coverImage }}" alt="{{ project.coverImageAlt }}">
+        </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+        <div class="project-header">
+          <span class="floating-link">
+            <i class="material-icons">&#xE038;</i>
+            <a href="{{ project.demoUrl }}">Demo</a>
+          </span>
+          <span class="floating-link">
+            <i class="material-icons">&#xE86F;</i>
+            <a href="{{ project.srcUrl }}">Source code</a>
+          </span>
+
+          <h2 class="project-name"><a href="{{ project.url }}">{{ project.projectName }}</a></h2>
+        </div>
+
+        <p class="project-description">
+          {{ project.description }}
+        </p>
+      </section>
     {% endfor %}
-  </ul>
-
+  </section>
 </div>
+
+<div class="spacer"></div>

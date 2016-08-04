@@ -1,0 +1,106 @@
+@import "variables.scss";
+
+.carousel img {
+  width: 100%;
+}
+
+.content-heading {
+  padding: 30px 10px 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  line-height: 40px;
+
+  margin-left: -60px;
+  margin-right: -60px;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 40px;
+    margin: 0;
+  }
+}
+
+.main-content {
+  padding-top: 20px;
+
+  & > .content-heading {
+
+  }
+}
+
+
+
+.project {
+  padding: 15px 0px;
+  margin-bottom: 40px;
+
+  .project-image {
+    height: 200px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #eeeeee;
+
+    img {
+      height: 200px;
+    }
+  }
+
+  .project-header {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    line-height: 40px;
+    
+    .project-name {
+      line-height: 40px;
+      font-size: 30px;
+      margin-bottom: 0px;
+      font-weight: 400;
+
+      a {
+        color: black;
+
+        &:hover {
+          color: $link-active-color;
+        }
+      }
+    }
+  }
+
+  .project-description {
+    clear: both;
+  }
+}
+
+
+
+.floating-link {
+  @include header-font;
+  font-size: 16px;
+  float: right;
+  line-height: inherit;
+
+  &:not(:last-child) {
+    margin-left: 15px;
+  }
+
+  a {
+    color: black;
+
+    &:hover {
+      color: $link-active-color;
+    }
+  }
+
+  .material-icons {
+    line-height: inherit;
+    font-size: 30px;
+    color: $link-active-color;
+  }
+}
+
+
+
+div.spacer {
+  height: 1000px;
+}

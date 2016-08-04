@@ -1,0 +1,68 @@
+@import "variables.scss";
+
+header {
+  margin-bottom: 71px;
+
+  .header-logo {
+    text-align: center;
+    position: fixed;
+    width: 260px;
+    background-color: $logo-main-color;
+    left: 50%;
+    top: 0;
+    margin-left: -130px;
+    z-index: 1050; // Needs to be greater than 1030 which is the nav level
+
+    .header-text {
+      margin: 0;
+      padding: 0;
+      font-size: 38px;
+      padding: 10px 0 20px;
+
+      a {
+        color: white;
+      }
+    }
+
+
+  }
+
+  .navbar {
+    background-color: #373a3c;
+    color: #666666;
+    line-height: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    .nav-link {
+      @include header-font;
+      font-size: 18px;
+      color: #666666;
+
+      &:hover {
+        color: #f3f3f3;
+      }
+    }
+
+    .nav-item.active .nav-link {
+      color: #f3f3f3;
+    }
+  }
+}
+
+
+header {
+  .navbar-nav {
+    width: 600px;
+    margin: auto;
+
+    .nav-item {
+      width: 100px;
+      text-align: center;
+
+      &:nth-child(2) {
+        float: right;
+      }
+    }
+  }
+}

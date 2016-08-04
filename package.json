@@ -1,0 +1,23 @@
+{
+  "name": "jamesfer.github.io",
+  "version": "0.1.0",
+  "description": "Profile of James Ferguson",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesfer/jamesfer.github.io.git"
+  },
+  "author": "James Ferguson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesfer/jamesfer.github.io/issues"
+  },
+  "homepage": "https://github.com/jamesfer/jamesfer.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.2",
+    "jquery": "^2.2.1"
+  }
+}
