@@ -1,0 +1,13 @@
+<section id="skills">
+  <h1 class="section-header">Skills</h1>
+
+  {% for skill in site.skills %}
+    <div class="skill d-flex">
+      <img class="skill-icon" src="/images/{{ skill.icon }}">
+      <div class="d-inline-block">
+        <h2 class="skill-name">{{ skill.name }}</h2>
+        <p class="skill-description">{{ skill.description }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</section>
