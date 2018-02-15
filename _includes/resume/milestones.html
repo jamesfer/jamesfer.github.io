@@ -25,6 +25,14 @@
             <span class="milestone-technology">{{ technology }}</span>
           {% endfor %}
         </div>
+
+        {% if milestone.notes %}
+          <ul class="milestone-notes">
+            {% for note in milestone.notes %}
+              <li class="milestone-note">{{ note }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </div>
     </div>
   {% endfor %}
