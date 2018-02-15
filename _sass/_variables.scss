@@ -1,13 +1,13 @@
 $primary-color: #047aff;
 
 @mixin body-font {
-  font-family: "Open Sans", helvetica, sans-serif;
+  font-family: Montserrat, helvetica, sans-serif;
   line-height: 1.2;
   color: rgba(0, 0, 0, 0.85);
 }
 
 @mixin header-font {
-  font-family: "Oswald", helvetica, sans-serif;
+  font-family: Kanit, helvetica, sans-serif;
   text-transform: uppercase;
 }
 
