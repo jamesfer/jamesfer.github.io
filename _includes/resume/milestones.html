@@ -29,6 +29,10 @@
         <h2 class="milestone-title">{{ milestone.title }}</h2>
         <h3 class="milestone-company">{{ milestone.company }}</h3>
 
+        {% if milestone.link %}
+          <a href="{{ milestone.link }}" class="milestone-link">{{ (milestone.link | remove_first: "http://") | remove_first: "https://" }}</a>
+        {% endif %}
+
         <div class="milestone-technologies">
           {% for technology in milestone.technologies %}
             <span class="milestone-technology">{{ technology }}</span>
