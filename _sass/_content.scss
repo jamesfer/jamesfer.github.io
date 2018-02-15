@@ -5,11 +5,11 @@
 }
 
 .section-header {
+  @include h1();
   display: inline-block;
-  font-size: 28px;
   margin-top: 15px;
   margin-bottom: 10px;
-  border-bottom: 3px solid $logo-main-color;
+  border-bottom: 3px solid $primary-color;
 }
 
 
@@ -24,7 +24,7 @@
 }
 
 .skill-name {
-  font-size: 18px;
+  @include h2();
 }
 
 
@@ -49,12 +49,11 @@
 }
 
 .milestone-title {
-  font-size: 18px;
+  @include h2();
 }
 
 .milestone-company {
-  font-size: 16px;
-  color: rgba(0, 0, 0, 0.5);
+  @include h3();
 }
 
 .milestone-technologies {
