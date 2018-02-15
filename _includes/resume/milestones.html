@@ -1,7 +1,8 @@
 <section id="milestones">
   <h1 class="section-header">Milestones</h1>
 
-  {% for milestone in site.milestones | sort: 'startDate' %}
+  {% assign sortedMilestones = (site.milestones | sort: 'startDate') | reverse %}
+  {% for milestone in sortedMilestones %}
     <div class="milestone">
       <img src="images/{{ milestone.logo }}" alt="{{ milestone.company }} logo" class="milestone-logo">
 
