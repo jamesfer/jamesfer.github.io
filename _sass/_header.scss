@@ -11,11 +11,13 @@ header {
 }
 
 .header-name {
+  @include header-font();
   color: white;
   font-size: 48px;
 }
 
 .header-subtitle {
+  @include header-font();
   color: rgba(255, 255, 255, 0.85);
   font-size: 22px;
 
