@@ -26,3 +26,35 @@
 .skill-name {
   font-size: 18px;
 }
+
+
+.milestone {
+  margin-top: 10px;
+  display: flex;
+}
+
+.milestone-logo {
+  margin-right: 5px;
+}
+
+.milestone-date {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.milestone-title {
+  font-size: 18px;
+}
+
+.milestone-technologies {
+  margin-top: 4px;
+}
+
+.milestone-technology {
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  padding: 2px 8px 4px;
+  margin-right: 4px;
+  font-size: 12px;
+}

@@ -1,0 +1,31 @@
+<section id="milestones">
+  <h1 class="section-header">Milestones</h1>
+
+  {% for milestone in site.milestones | sort: 'startDate' %}
+    <div class="milestone">
+      <img src="images/{{ milestone.logo }}" alt="{{ milestone.company }} logo" class="milestone-logo">
+
+      <div>
+        <span class="milestone-date">
+          {{ milestone.startDate | date: '%B %Y' }}
+          -
+          {% if milestone.endDate %}
+            {{ milestone.endDate | date: '%B %Y' }}
+          {% else %}
+            now
+          {% endif %}
+        </span>
+
+        <h2 class="milestone-title">
+          {{ milestone.role }} - {{ milestone.company }}
+        </h2>
+
+        <div class="milestone-technologies">
+          {% for technology in milestone.technologies %}
+            <span class="milestone-technology">{{ technology }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</section>

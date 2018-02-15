@@ -18,6 +18,7 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 # Collections
 collections:
   skills:
+  milestones:
 
 
 # Build settings
