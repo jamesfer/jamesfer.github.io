@@ -1,8 +1,5 @@
 $primary-color: #047aff;
 
-$link-active-color: #2481D6;
-$link-color: darken($link-active-color, 10%);
-
 @mixin body-font {
   font-family: "Open Sans", helvetica, sans-serif;
   line-height: 1.3;
