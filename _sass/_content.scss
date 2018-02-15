@@ -50,13 +50,17 @@
 
 .milestone-technologies {
   margin-top: 4px;
+  // Set font-size to zero to remove any space between tags
+  font-size: 0;
 }
 
 .milestone-technology {
+  display: inline-block;
   color: rgba(0, 0, 0, 0.7);
   background-color: rgba(0, 0, 0, 0.08);
   border-radius: 2px;
   padding: 2px 8px 4px;
-  margin-right: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
   font-size: 12px;
 }
