@@ -16,9 +16,8 @@
           {% endif %}
         </span>
 
-        <h2 class="milestone-title">
-          {{ milestone.role }} - {{ milestone.company }}
-        </h2>
+        <h2 class="milestone-title">{{ milestone.title }}</h2>
+        <h3 class="milestone-company">{{ milestone.company }}</h3>
 
         <div class="milestone-technologies">
           {% for technology in milestone.technologies %}
