@@ -29,8 +29,12 @@
 
 
 .milestone {
-  margin-top: 10px;
+  margin-top: 30px;
   display: flex;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 
 .milestone-logo {
