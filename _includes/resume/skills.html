@@ -1,11 +1,19 @@
 <section id="skills">
   <h1 class="section-header">Skills</h1>
 
-  {% for skill in site.skills %}
-    <div class="skill d-flex">
+  {% assign sortedSkills = ((site.skills | reverse) | sort: 'level') | reverse %}
+  {% for skill in sortedSkills %}
+    <div class="skill">
       <img class="skill-icon" src="/images/{{ skill.icon }}">
-      <div class="d-inline-block">
+
+      <div class="skill-details">
         <h2 class="skill-name">{{ skill.name }}</h2>
+
+        <div class="skill-level">
+          {% for i in (1..skill.level) %}
+            <div class="skill-level-bar"></div>
+          {% endfor %}
+        </div>
       </div>
     </div>
   {% endfor %}

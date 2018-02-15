@@ -15,6 +15,11 @@
 
 .skill {
   margin-top: 10px;
+  display: flex;
+}
+
+.skill-details {
+  flex: 1;
 }
 
 .skill-icon {
@@ -25,6 +30,25 @@
 
 .skill-name {
   @include h2();
+}
+
+.skill-level {
+  // Set font-size to zero to remove any space between tags
+  font-size: 0;
+  max-width: 250px;
+  margin-top: 2px;
+}
+
+.skill-level-bar {
+  height: 10px;
+  background-color: $primary-color;
+  box-sizing: border-box;
+  width: 9.6%;
+  display: inline-block;
+
+  &:nth-child(2n):not(:last-child) {
+    margin-right: 1%;
+  }
 }
 
 
