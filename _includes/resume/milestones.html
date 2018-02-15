@@ -8,12 +8,19 @@
 
       <div>
         <span class="milestone-date">
-          {{ milestone.startDate | date: '%B %Y' }}
-          -
           {% if milestone.endDate %}
-            {{ milestone.endDate | date: '%B %Y' }}
+            {% assign startYear = milestone.startDate | date: '%Y' %}
+            {% assign endYear = milestone.endDate | date: '%Y' %}
+            {% assign startMonth = milestone.startDate | date: '%B' %}
+            {% assign endMonth = milestone.endDate | date: '%B' %}
+
+            {% if startYear == endYear %}
+              {{ startMonth }} - {{ endMonth }} {{ endYear }}
+            {% else %}
+              {{ startYear }} - {{ endYear }}
+            {% endif %}
           {% else %}
-            now
+            {{ milestone.startDate | date: '%Y' }} - now
           {% endif %}
         </span>
 
