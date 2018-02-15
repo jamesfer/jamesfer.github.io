@@ -1,0 +1,12 @@
+<section id="references">
+  <h1 class="section-header">References</h1>
+
+  {% for reference in site.references %}
+    <div class="reference">
+      <h2 class="reference-name">{{ reference.name }}</h2>
+      <h3 class="reference-role">{{ reference.role }}</h3>
+      <span class="reference-phone">{{ reference.phone }}</span>
+      <a href="mailto:{{ reference.email }}" class="reference-email">{{ reference.email }}</a>
+    </div>
+  {% endfor %}
+</section>
