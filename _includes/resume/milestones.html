@@ -4,7 +4,9 @@
   {% assign sortedMilestones = (site.milestones | sort: 'startDate') | reverse %}
   {% for milestone in sortedMilestones %}
     <div class="milestone">
-      <img src="images/{{ milestone.logo }}" alt="{{ milestone.company }} logo" class="milestone-logo">
+      <div class="milestone-logo">
+        <img src="images/{{ milestone.logo }}" alt="{{ milestone.company | default: milestone.name }} logo">
+      </div>
 
       <div>
         <span class="milestone-date">
