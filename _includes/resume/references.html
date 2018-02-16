@@ -1,7 +1,8 @@
 <section id="references">
   <h1 class="section-header">References</h1>
 
-  {% for reference in site.references %}
+  {% assign orderedReferences = (site.references | sort: 'order') %}
+  {% for reference in orderedReferences %}
     <div class="reference">
       <h2 class="reference-name">{{ reference.name }}</h2>
       <h3 class="reference-role">{{ reference.role }}</h3>
