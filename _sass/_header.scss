@@ -3,6 +3,11 @@
 header {
   padding: 25px 15px 35px;
   background-color: $primary-color;
+  color: white;
+
+  a {
+    color: white;
+  }
 }
 
 .header-name, .header-subtitle {
@@ -24,4 +29,36 @@ header {
   .dot {
     padding: 0 15px;
   }
+}
+
+
+.contact-details {
+  margin: 30px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+
+  a {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  svg {
+    fill: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.detail {
+  padding: 0 20px;
+}
+
+.detail-icon {
+  margin-right: 3px;
+}
+
+.detail-icon > svg {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  margin-top: -2px;
 }
