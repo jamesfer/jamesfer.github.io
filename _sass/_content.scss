@@ -39,19 +39,38 @@
 .skill-level {
   // Set font-size to zero to remove any space between tags
   font-size: 0;
-  max-width: 250px;
+  // Width is (250 - 16) because the bars have four, 4px gaps between them
+  max-width: 234px;
   margin-top: 2px;
+  white-space: nowrap;
 }
 
 .skill-level-bar {
   height: 10px;
-  background-color: $primary-color;
+  border: 2px solid $primary-color;
   box-sizing: border-box;
-  width: 9.6%;
+  width: 10%;
   display: inline-block;
 
-  &:nth-child(2n):not(:last-child) {
-    margin-right: 1%;
+  // Hide the right border on the first bar of each segment
+  &:nth-child(2n+1) {
+    border-right-width: 0;
+  }
+
+  // Hide the left border on the second bar of each segment
+  &:nth-child(2n) {
+    border-left-width: 0;
+
+    // Add spacing in between each bar
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+
+
+  &.filled {
+    background-color: $primary-color;
   }
 }
 

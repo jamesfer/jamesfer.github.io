@@ -10,8 +10,12 @@
         <h2 class="skill-name">{{ skill.name }}</h2>
 
         <div class="skill-level">
-          {% for i in (1..skill.level) %}
-            <div class="skill-level-bar"></div>
+          {% for i in (1..10) %}
+            {% if i <= skill.level %}
+              <div class="skill-level-bar filled"></div>
+            {% else %}
+              <div class="skill-level-bar"></div>
+            {% endif %}
           {% endfor %}
         </div>
       </div>
