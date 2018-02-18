@@ -76,11 +76,13 @@
 
 
 .milestone {
-  margin-top: 30px;
+  // We have to use padding to space the milestones because margins don't play
+  // nicely when printing from chrome.
+  padding-top: 30px;
   display: flex;
 
   &:first-of-type {
-    margin-top: 0;
+    padding-top: 0;
   }
 }
 
