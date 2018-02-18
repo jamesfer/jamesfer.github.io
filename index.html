@@ -9,10 +9,17 @@ link: resume
     <div class="col-md">
       {% include resume/about.html %}
       {% include resume/skills.html %}
-      {% include resume/references.html %}
+
+      <div class="d-none d-md-block">
+        {% include resume/references.html %}
+      </div>
     </div>
     <div class="col-md">
       {% include resume/milestones.html %}
+
+      <div class="d-md-none">
+        {% include resume/references.html %}
+      </div>
     </div>
   </div>
 </main>
