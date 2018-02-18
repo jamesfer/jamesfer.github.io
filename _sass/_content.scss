@@ -14,6 +14,7 @@
 
 
 .skill {
+  page-break-inside: avoid;
   margin-top: 20px;
   display: flex;
 
@@ -80,6 +81,7 @@
   // nicely when printing from chrome.
   padding-top: 30px;
   display: flex;
+  page-break-inside: avoid;
 
   &:first-of-type {
     padding-top: 0;
