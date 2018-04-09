@@ -1,0 +1,52 @@
+<section id="education">
+  <h1 class="section-header">Education</h1>
+
+  {% assign sortedEducations = (site.educations | sort: 'startDate') | reverse %}
+  {% for education in sortedEducations %}
+    <div class="milestone">
+      <div class="milestone-logo">
+        <img src="images/{{ education.logo }}" alt="{{ education.company | default: education.name }} logo">
+      </div>
+
+      <div>
+        <span class="milestone-date">
+          {% if education.endDate %}
+            {% assign startYear = education.startDate | date: '%Y' %}
+            {% assign endYear = education.endDate | date: '%Y' %}
+            {% assign startMonth = education.startDate | date: '%B' %}
+            {% assign endMonth = education.endDate | date: '%B' %}
+
+            {% if startYear == endYear %}
+              {{ startMonth }} - {{ endMonth }} {{ endYear }}
+            {% else %}
+              {{ startYear }} - {{ endYear }}
+            {% endif %}
+          {% else %}
+            {{ education.startDate | date: '%Y' }} - now
+          {% endif %}
+        </span>
+
+        <h2 class="milestone-title">{{ education.title }}</h2>
+        <h3 class="milestone-company">{{ education.company }}</h3>
+
+        {% if education.link %}
+          <a href="{{ education.link }}" class="milestone-link">{{ (education.link | remove_first: "http://") | remove_first: "https://" }}</a>
+        {% endif %}
+
+        <div class="milestone-technologies">
+          {% for technology in education.technologies %}
+            <span class="milestone-technology">{{ technology }}</span>
+          {% endfor %}
+        </div>
+
+        {% if education.notes %}
+          <ul class="milestone-notes">
+            {% for note in education.notes %}
+              <li class="milestone-note">{{ note }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</section>

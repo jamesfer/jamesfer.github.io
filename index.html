@@ -5,21 +5,29 @@ link: resume
 ---
 
 <main class="container content">
-  <div class="row">
-    <div class="col-md">
+  <!-- Mobile layout -->
+  <div class="row d-md-none">
+    <div class="col">
       {% include resume/about.html %}
       {% include resume/skills.html %}
-
-      <div class="d-none d-md-block">
-        {% include resume/references.html %}
-      </div>
+      {% include resume/highlights.html %}
+      {% include resume/experience.html %}
+      {% include resume/education.html %}
+      {% include resume/references.html %}
     </div>
-    <div class="col-md">
-      {% include resume/milestones.html %}
+  </div>
 
-      <div class="d-md-none">
-        {% include resume/references.html %}
-      </div>
+  <!-- Desktop layout -->
+  <div class="row d-none d-md-flex">
+    <div class="col">
+      {% include resume/about.html %}
+      {% include resume/highlights.html %}
+      {% include resume/education.html %}
+    </div>
+    <div class="col">
+      {% include resume/skills.html %}
+      {% include resume/experience.html %}
+      {% include resume/references.html %}
     </div>
   </div>
 </main>

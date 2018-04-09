@@ -1,0 +1,35 @@
+<section id="highlight">
+  <h1 class="section-header">Highlights</h1>
+
+  {% assign sortedHighlights = (site.highlights | sort: 'order') %}
+  {% for highlight in sortedHighlights %}
+    <div class="milestone">
+      <div class="milestone-logo">
+        <img src="images/{{ highlight.logo }}" alt="{{ highlight.company | default: highlight.name }} logo">
+      </div>
+
+      <div>
+        <h2 class="milestone-title">{{ highlight.title }}</h2>
+        <h3 class="milestone-company">{{ highlight.company }}</h3>
+
+        {% if highlight.link %}
+          <a href="{{ highlight.link }}" class="milestone-link">{{ (highlight.link | remove_first: "http://") | remove_first: "https://" }}</a>
+        {% endif %}
+
+        <div class="milestone-technologies">
+          {% for technology in highlight.technologies %}
+            <span class="milestone-technology">{{ technology }}</span>
+          {% endfor %}
+        </div>
+
+        {% if highlight.notes %}
+          <ul class="milestone-notes">
+            {% for note in highlight.notes %}
+              <li class="milestone-note">{{ note }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</section>
