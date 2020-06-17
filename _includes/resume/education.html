@@ -3,7 +3,7 @@
 
   {% assign sortedEducations = (site.educations | sort: 'startDate') | reverse %}
   {% for education in sortedEducations %}
-    {% if !education.hide %}
+    {% unless education.hide %}
       <div class="milestone">
         <div class="milestone-logo">
           <img src="images/{{ education.logo }}" alt="{{ education.company | default: education.name }} logo">
@@ -49,6 +49,6 @@
           {% endif %}
         </div>
       </div>
-    {% endif %}
+    {% endunless %}
   {% endfor %}
 </section>
