@@ -4,6 +4,10 @@
   margin-top: -5px;
 }
 
+section {
+  break-inside: avoid;
+}
+
 .section-header {
   @include h1();
   display: inline-block;
@@ -153,10 +157,6 @@
 
 .reference-name {
   @include h2();
-}
-
-.reference-role {
-  @include h3();
 }
 
 .reference-phone {
