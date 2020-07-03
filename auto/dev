@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -v ${PWD}:/cwd --workdir /cwd -it -p 4000:4000 resume
