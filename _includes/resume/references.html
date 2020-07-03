@@ -4,7 +4,11 @@
   {% assign orderedReferences = (site.references | sort: 'order') %}
   {% for reference in orderedReferences %}
     {% unless reference.hidden %}
-      <div class="reference">
+    <div class="milestone">
+      <div class="milestone-logo reference-logo">
+        <img src="images/person.png" alt="{{ reference.name }} picture">
+      </div>
+      <div>
         <h2 class="reference-name">{{ reference.name }}</h2>
         <span class="reference-role">{{ reference.role }}</span>
         -
@@ -18,6 +22,7 @@
         <span class="reference-phone">{{ reference.phone }}</span>
         <a href="mailto:{{ reference.email }}" class="reference-email">{{ reference.email }}</a>
       </div>
+    </div>
     {% endunless %}
   {% endfor %}
 </section>

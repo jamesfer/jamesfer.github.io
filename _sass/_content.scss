@@ -155,6 +155,13 @@ section {
   }
 }
 
+.reference-logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 .reference-name {
   @include h2();
 }
