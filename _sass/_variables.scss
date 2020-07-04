@@ -3,6 +3,10 @@ $primary-color: #047aff;
 @mixin body-font {
   font-family: Montserrat, helvetica, sans-serif;
   line-height: 1.2;
+
+  @media print {
+    font-size: 14px;
+  }
 }
 
 @mixin header-font {
@@ -23,5 +27,5 @@ $primary-color: #047aff;
 @mixin h3 {
   @include body-font();
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.5);
 }

@@ -22,7 +22,6 @@ exclude:
 
 # Collections
 collections:
-  skills:
   milestones:
   references:
   highlights:

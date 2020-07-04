@@ -4,6 +4,10 @@
   margin-top: -5px;
 }
 
+section {
+  break-inside: avoid;
+}
+
 .section-header {
   @include h1();
   display: inline-block;
@@ -151,12 +155,15 @@
   }
 }
 
-.reference-name {
-  @include h2();
+.reference-logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-.reference-role {
-  @include h3();
+.reference-name {
+  @include h2();
 }
 
 .reference-phone {
