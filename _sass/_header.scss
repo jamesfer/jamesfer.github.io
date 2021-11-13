@@ -16,8 +16,19 @@ header {
   }
 }
 
+.header-image {
+  width: 150px;
+
+  @include media-breakpoint-up(md) {
+    width: 170px;
+  }
+}
+
+.header-image-col {
+  flex-grow: 0;
+}
+
 .header-name, .header-subtitle {
-  text-align: center;
   margin: 0;
 }
 
@@ -27,8 +38,12 @@ header {
   font-size: 38px;
   white-space: nowrap;
 
-  @include media-breakpoint-up(sm) {
-    font-size: 68px;
+  @include media-breakpoint-up(md) {
+    font-size: 54px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 60px;
   }
 }
 
@@ -37,8 +52,12 @@ header {
   color: rgba(255, 255, 255, 0.85);
   font-size: 20px;
 
-  @include media-breakpoint-up(sm) {
-    font-size: 22px;
+  @include media-breakpoint-up(md) {
+    font-size: 28px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 34px;
   }
 
   .dot {
@@ -51,11 +70,11 @@ header {
   margin: 20px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  //justify-content: center;
   color: rgba(255, 255, 255, 0.6);
 
   @include media-breakpoint-up(sm) {
-    margin-top: 30px;
+    margin-top: 15px;
   }
 
   a {
@@ -68,7 +87,7 @@ header {
 }
 
 .detail {
-  padding: 0 20px;
+  padding-right: 20px;
 }
 
 .detail-icon {
