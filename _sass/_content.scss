@@ -1,11 +1,11 @@
 @import "variables";
 
 .content {
-  margin-top: -5px;
+  //margin-top: -5px;
 }
 
 section {
-  break-inside: avoid;
+  //break-inside: avoid;
 }
 
 .section-header {
@@ -14,6 +14,10 @@ section {
   margin-top: 35px;
   margin-bottom: 10px;
   border-bottom: 3px solid $primary-color;
+
+  @media print {
+    margin-top: 20px;
+  }
 }
 
 
@@ -83,8 +87,8 @@ section {
 .milestone {
   // We have to use padding to space the milestones because margins don't play
   // nicely when printing from chrome.
-  padding-top: 30px;
-  display: flex;
+  padding-top: 20px;
+  //display: flex;
   page-break-inside: avoid;
 
   &:first-of-type {
@@ -94,28 +98,58 @@ section {
 
 .milestone-logo {
   margin-right: 10px;
-  margin-top: 6px;
-  width: 60px;
-  height: 60px;
+  //margin-top: 6px;
+  width: 40px;
+  height: 40px;
   text-align: center;
-  flex-shrink: 0;
 
   img {
     height: 100%;
   }
 }
 
-.milestone-date {
-  font-size: 15px;
-  color: rgba(0, 0, 0, 0.5);
-}
-
 .milestone-title {
   @include h2();
+  //display: inline-block;
+  margin-bottom: 2px;
 }
 
 .milestone-company {
   @include h3();
+  display: inline-block;
+  //padding-left: 5px;
+
+  //&::before {
+  //  content: "-";
+  //  padding-right: 5px;
+  //}
+}
+
+.milestone-date {
+  display: inline-block;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 10px;
+
+  @media print {
+    font-size: 12px;
+  }
+}
+
+.milestone-link-icon {
+  margin-right: 3px;
+
+  > svg {
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+    margin-top: -2px;
+
+    @media print {
+      height: 12px;
+      width: 12px;
+    }
+  }
 }
 
 .milestone-technologies {
@@ -129,17 +163,22 @@ section {
   color: rgba(0, 0, 0, 0.7);
   background-color: rgba(0, 0, 0, 0.08);
   border-radius: 2px;
-  padding: 2px 8px 4px;
+  padding: 4px 8px 4px;
   margin-right: 5px;
   margin-bottom: 5px;
   font-size: 12px;
   white-space: nowrap;
+
+  @media print {
+    font-size: 9px;
+    padding: 2px 6px 2px;
+  }
 }
 
 .milestone-notes {
-  margin-top: 10px;
-  margin-bottom: 0;
-  margin-left: -40px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-left: 20px;
 }
 
 .milestone-note {
@@ -158,8 +197,6 @@ section {
 .reference-logo img {
   width: 40px;
   height: 40px;
-  margin-right: 10px;
-  margin-left: 10px;
 }
 
 .reference-name {

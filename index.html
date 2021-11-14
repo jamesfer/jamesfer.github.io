@@ -4,27 +4,27 @@ title: Resume
 link: resume
 ---
 
-<main class="container content">
+<main class="container wide-print-container content">
   <!-- Mobile layout -->
-  <div class="row d-lg-none">
+  <div class="row d-sm-none">
     <div class="col">
       {% include resume/about.html %}
-      {% include resume/highlights.html %}
       {% include resume/experience.html %}
+      {% include resume/highlights.html %}
       {% include resume/education.html %}
       {% include resume/references.html %}
     </div>
   </div>
 
   <!-- Desktop layout -->
-  <div class="row d-none d-lg-flex">
+  <div class="row d-none d-sm-flex">
     <div class="col">
       {% include resume/about.html %}
       {% include resume/highlights.html %}
-      {% include resume/education.html %}
     </div>
     <div class="col">
       {% include resume/experience.html %}
+      {% include resume/education.html %}
       {% include resume/references.html %}
     </div>
   </div>
