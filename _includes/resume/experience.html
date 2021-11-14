@@ -5,49 +5,52 @@
   {% for experience in sortedExperiences %}
     {% unless experience.hide %}
       <div class="milestone">
-        <div class="milestone-logo">
-          <img src="images/{{ experience.logo }}" alt="{{ experience.company | default: experience.name }} logo">
-        </div>
-
-        <div>
-          <span class="milestone-date">
-            {% if experience.endDate %}
-              {% assign startYear = experience.startDate | date: '%Y' %}
-              {% assign endYear = experience.endDate | date: '%Y' %}
-              {% assign startMonth = experience.startDate | date: '%B' %}
-              {% assign endMonth = experience.endDate | date: '%B' %}
-
-              {% if startYear == endYear %}
-                {{ startMonth }} - {{ endMonth }} {{ endYear }}
-              {% else %}
-                {{ startYear }} - {{ endYear }}
-              {% endif %}
-            {% else %}
-              {{ experience.startDate | date: '%Y' }} - now
-            {% endif %}
-          </span>
-
-          <h2 class="milestone-title">{{ experience.title }}</h2>
-          <h3 class="milestone-company">{{ experience.company }}</h3>
-
-          {% if experience.link %}
-            <a href="{{ experience.link }}" class="milestone-link">{{ (experience.link | remove_first: "http://") | remove_first: "https://" }}</a>
-          {% endif %}
-
-          <div class="milestone-technologies">
-            {% for technology in experience.technologies %}
-              <span class="milestone-technology">{{ technology }}</span>
-            {% endfor %}
+        <div class="d-flex">
+          <div class="milestone-logo">
+            <img src="images/{{ experience.logo }}" alt="{{ experience.company | default: experience.name }} logo">
           </div>
 
-          {% if experience.notes %}
-            <ul class="milestone-notes">
-              {% for note in experience.notes %}
-                <li class="milestone-note">{{ note }}</li>
+          <div>
+            <h3 class="milestone-title">{{ experience.title }}</h3>
+            <h4 class="milestone-company">{{ experience.company }}</h4>
+
+            <span class="milestone-date">
+              {% if experience.endDate %}
+                {% assign startYear = experience.startDate | date: '%Y' %}
+                {% assign endYear = experience.endDate | date: '%Y' %}
+                {% assign startMonth = experience.startDate | date: '%B' %}
+                {% assign endMonth = experience.endDate | date: '%B' %}
+
+                {% if startYear == endYear %}
+                  {{ startMonth }} - {{ endMonth }} {{ endYear }}
+                {% else %}
+                  {{ startYear }} - {{ endYear }}
+                {% endif %}
+              {% else %}
+                {{ experience.startDate | date: '%Y' }} - now
+              {% endif %}
+            </span>
+
+
+            {% if experience.link %}
+              <a href="{{ experience.link }}" class="milestone-link">{{ (experience.link | remove_first: "http://") | remove_first: "https://" }}</a>
+            {% endif %}
+
+            <div class="milestone-technologies">
+              {% for technology in experience.technologies %}
+                <span class="milestone-technology">{{ technology }}</span>
               {% endfor %}
-            </ul>
-          {% endif %}
+            </div>
+          </div>
         </div>
+
+        {% if experience.notes %}
+          <ul class="milestone-notes">
+            {% for note in experience.notes %}
+              <li class="milestone-note">{{ note }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </div>
     {% endunless %}
   {% endfor %}
