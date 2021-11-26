@@ -6,18 +6,19 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: James Ferguson
+title: James Ferguson - Resume
 email: jamesferguson497@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  I am a Full Stack Developer specializing in Node.js, Angular and Docker. Quality through constant
-  improvement is my motto and I thrive on all kinds of feedback.
-keywords: web, developer, javascript, hire
+  Senior Data Engineer with 5 years of experience. I love building high performance pipelines and
+  APIs with Kafka and Elasticsearch and I have significant experience with Scala and Typescript.
+keywords: data, engineer, kafka, elasticsearch
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jamesfer.me" # the base hostname & protocol for your site
+url: "https://jamesfer.me" # the base hostname & protocol for your site
 
 exclude:
   - package.json
   - node_modules
+  - auto
 
 
 # Collections
